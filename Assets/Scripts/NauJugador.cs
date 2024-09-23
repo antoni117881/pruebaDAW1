@@ -6,7 +6,7 @@ public class NauJugador : MonoBehaviour
 {
     private float _vel;
 
-    Vector2 minPantalla, maxPantalla;
+   private  Vector2 minPantalla, maxPantalla;
     // Start is called before the first frame update
     void Start()
     {

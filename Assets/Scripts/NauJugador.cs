@@ -11,8 +11,9 @@ public class NauJugador : MonoBehaviour
     void Start()
     {
         _vel = 8f;
-        minPantalla = Camera.main.ViewportToWorldPoint( new Vector2(0 , 0));
-        maxPantalla = Camera.main.ViewportToWorldPoint(new Vector2 (1, 1));
+        minPantalla = Camera.main.ViewportToWorldPoint( new Vector2(0  , 0) );
+        maxPantalla = Camera.main.ViewportToWorldPoint(new Vector2 (1, 1) );
+
         
     }
 
@@ -33,6 +34,7 @@ public class NauJugador : MonoBehaviour
 
         novaPos.x = Mathf.Clamp( novaPos.x , minPantalla.x , maxPantalla.x);
         novaPos.y = Mathf.Clamp(novaPos.y, minPantalla.y, maxPantalla.y);
+        
         transform.position = novaPos;
 
        

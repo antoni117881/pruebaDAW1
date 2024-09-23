@@ -20,12 +20,13 @@ public class NauJugador : MonoBehaviour
 
         // Debug.Log("X = " + direccioIndicadaX + "y ="+ direccioIndicadaY);
 
-        Vector2 direccioIndicada = new Vector2(direccioIndicadaX, direccioIndicadaY);
+        Vector2 direccioIndicada = new Vector2(direccioIndicadaX, direccioIndicadaY).normalized;
 
         Vector2 novaPos = transform.position;// posiscio actual del objecte amb el transform.position
 
         novaPos = novaPos + direccioIndicada * _vel * Time.deltaTime ;
         transform.position = novaPos;
+
        
 
     }

@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d684e817706dc4cb5b1663bd987ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrefabProjectil: {fileID: 0}
 --- !u!1 &1825764058
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d684e817706dc4cb5b1663bd987ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrefabProjectil: {fileID: 6403079679983473723, guid: 6638a33f44bc26342b2a346ce40728d6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public class NauJugador : MonoBehaviour
     private float _vel;
 
    private  Vector2 minPantalla, maxPantalla;
+
+   [SerializeField] private GameObject PrefabProjectil;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,21 @@ public class NauJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MoureNau();
+        DisparaProjectil();
+       
+
+    }
+    private void DisparaProjectil()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+           GameObject Projectil = Instantiate(PrefabProjectil);
+            Projectil.transform.position = transform.position;        
+        }
+    }
+    private void MoureNau()
+    {
         float direccioIndicadaX = Input.GetAxisRaw("Horizontal");
 
         float direccioIndicadaY = Input.GetAxisRaw("Vertical");
@@ -38,14 +55,12 @@ public class NauJugador : MonoBehaviour
 
         Vector2 novaPos = transform.position;// posiscio actual del objecte amb el transform.position
 
-        novaPos = novaPos + direccioIndicada * _vel * Time.deltaTime ;
+        novaPos = novaPos + direccioIndicada * _vel * Time.deltaTime;
 
-        novaPos.x = Mathf.Clamp( novaPos.x , minPantalla.x  , maxPantalla.x );
+        novaPos.x = Mathf.Clamp(novaPos.x, minPantalla.x, maxPantalla.x);
         novaPos.y = Mathf.Clamp(novaPos.y, minPantalla.y, maxPantalla.y);
-        
-        transform.position = novaPos;
 
-       
+        transform.position = novaPos;
 
     }
 }

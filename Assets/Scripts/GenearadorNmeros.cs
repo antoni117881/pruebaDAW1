@@ -8,7 +8,7 @@ public class GenearadorNmeros : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        invokeRepiting("GeneraNumero", 1f, 2f);
+        InvokeRepeating("GeneraNumero", 1f, 2f);
     }
 
     private void GeneraNumero()

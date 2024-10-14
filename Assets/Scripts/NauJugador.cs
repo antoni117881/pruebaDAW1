@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NauJugador : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class NauJugador : MonoBehaviour
    [SerializeField] private TMPro.TextMeshProUGUI componentTextVides;
 
     private int videsNau;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -64,18 +67,19 @@ public class NauJugador : MonoBehaviour
         novaPos.y = Mathf.Clamp(novaPos.y, minPantalla.y, maxPantalla.y);
 
         transform.position = novaPos;
-    }
+    }   
 
     private void OnTriggerEnter2D(Collider2D objecteTocat)
     {
         if(objecteTocat.tag == "Numero")
         {
             videsNau--;
+            componentTextVides.text = "vides " + videsNau.ToString();
             if (videsNau <= 0)
             {
                 GameObject explosio = Instantiate(prefabExplosio);
                 explosio.transform.position = transform.position;
-
+                SceneManager.LoadScene("PantallaResultats");    
                 Destroy(gameObject);
             }
           

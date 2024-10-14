@@ -3,6 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
+
+/*
+ * Repas 
+ * que hem vist 
+ *      - Crear objectes a la escenea 
+ *      - crear Emty Object utilizat per el generador de numeros 
+ *      -Prefabs  crear objectes cuan el joc sesta executant    
+ *          - crear un prefab es arastrarlo a la carpeta prefabs
+ *          -per crear un prefab a l'ecena en execucio amb el metoda Instantiate(nom del prefab)
+ *              -Variable del prefab de tipus GameObject 
+ *      -Trobar posisio objecta actual transform.position
+ *      -Trbar marges pantalla amb el camera.main.viewportToWorldPoint()
+ *      -[serializeField] per fer que una variable private de la clase es mostri a l'editor de unity 
+ *      - utilitzar un sprite com si fos mes d'una (contenit subimatges)
+ *          -selecionem srite amb l'opcio sprite mode cambie a multiple y apliquem 
+ *          - cliquelm al boto sprite editor per editar el sprite y ferlo mes d'un 
+ *      -Destroir objecte actual destroy(GameObject)
+ *      -crida metode al cap e X segons  Invoke (nomMetode , Xf segons);
+ *     -cridar u metode al cap de X segons i cada y Segons  InvokeRepeatig (nommetode ,xf ,yf)
+ *     -com aturar un  InvokeRepeating CanselInvoke(Nome metode)
+ *     -com detectar que un objecta toca un altre 
+ *          - afegir als objectes ue volem que es toquin els components BoxCollider2D i Rigidbody2D
+ *          -en BoxColider2D sa d'activar el box de  IsTriger
+ *          -En Rigidbody2D GravityScale posarlo a 0 
+ */
 public class NauJugador : MonoBehaviour
 {
     private float _vel;
